@@ -88,14 +88,13 @@
 
     cp.prototype.formatData = function(data){
 
-        var slength = this.slength;
-        var nWidth = (this.width / slength);
-        var nHeight = (this.height / slength);
-
-        var arrlength = nWidth * nHeight;
-        var currentPx = null;
-        var arr = [];
-        var i = 0,j = 0;
+        var slength = this.slength,
+            nWidth = (this.width / slength),
+            nHeight = (this.height / slength),
+            arrlength = nWidth * nHeight,
+            currentPx = null,
+            arr = [],
+            i = 0,j = 0;
 
         //各个方块左顶点坐标
         for( ; j < nHeight ; j ++){
@@ -108,21 +107,21 @@
 
         //得到方块区域颜色均值(算法有些慢)
         function getSquareAve(index){
-            var i = 0;
-            var j = 0;
-            var currentPx = null;
-            var resultBuffer = {
-                r : 0 ,
-                g : 0 ,
-                b : 0 ,
-                a : 0
-            }
-            var result = {
-                r : 0 ,
-                g : 0 ,
-                b : 0 ,
-                a : 0
-            }
+            var i = 0,
+                j = 0 ,
+                currentPx = null,
+                resultBuffer = {
+                    r : 0 ,
+                    g : 0 ,
+                    b : 0 ,
+                    a : 0
+                },
+                result = {
+                    r : 0 ,
+                    g : 0 ,
+                    b : 0 ,
+                    a : 0
+                };
             for( ; i < slength ; i ++){
 
                 for( ; j < slength ; j ++){
