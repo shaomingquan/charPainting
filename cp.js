@@ -12,9 +12,13 @@
         this.char = config.char;
         //分割粒度(单位px)
         this.slength = config.slength;
+        //字体大小
+        this.fontSize = config.fontsize || 16;
     }
 
     cp.prototype.go = function(){
+        //设置字体大小
+        this.stage.style.fontSize = this.fontSize + "px";
 
         //下载图片,drawImage为异步回调
         this.getImgDownload(this.url ,this.drawImage);

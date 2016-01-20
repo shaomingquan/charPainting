@@ -6,13 +6,14 @@
 
 new cp(config).go();
 
-config为配置,url为图片地址,slength为分割粒度,stage为渲染舞台,char为填充字符
+config为配置,url为图片地址,slength为分割粒度,stage为渲染舞台,char为填充字符,fontsize为字体大小
 
     {
         url:"./example.png" ,
         slength : 1 ,
         stage :document.getElementById("stage") ,
-        char:"囧"
+        char:"囧" ,
+        fontsize : 12
     }
     
 ## 基本思路
